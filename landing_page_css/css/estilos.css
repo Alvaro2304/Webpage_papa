@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
 body{
     font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+    
 }
 
 :root{
@@ -8,10 +10,22 @@ body{
     --color-title: #001A49;
 }
 
+img.mediano{
+    width: 192px;
+    height: 246px;
+}
+
 .container{
     width: 90%;
     max-width: 1200px;
     margin:0 auto;
+    overflow: hidden;
+    /*background-color: #FFFF00;*/
+    padding: var(--padding-container)
+}
+
+.container2{
+    
     overflow: hidden;
     /*background-color: #FFFF00;*/
     padding: var(--padding-container)
@@ -113,6 +127,120 @@ body{
     justify-self: center;
     color: #fff;
     text-decoration: none;
-    padding: 13px 20px;
-    border-radius: 30px;
+    padding: 13px 30px;
+    border-radius: 32px;
+}
+
+/* Servicios */
+
+.about{
+    text-align: center;
+}
+
+.subtitle{
+    color: var(--color-title);
+    font-size: 2rem;
+    margin-bottom: 25px;
+}
+
+.about__paragraph{
+    line-height: 1.7;
+}
+
+.about__main{
+    padding-top: 80px;
+    display: grid;
+    width: 90%;
+    margin: 0 auto;
+    gap: 1em;
+    overflow: hidden;
+    grid-template-columns: repeat(auto-fit,minmax(260px,auto));
+}
+
+.about__icons{
+    display: grid;
+    gap: 1em;
+    justify-items: center;
+    width: 260px;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+/* Galeria */
+
+.gallery{
+    
+    background-color: #f9f0d0;
+    background-image:  radial-gradient(#444cf7 0.5px, transparent 0.5px), radial-gradient(#444cf7 0.5px, #f9f0d0 0.5px);
+    background-size: 20px 20px;
+    background-position: 0 0,10px 10px;
+    overflow: hidden;
+    text-align: center;
+    
+    
+    
+    
+}
+  
+
+.wrapper{
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+
+}
+
+.wrapper .carousel{
+    font-size: 0px;
+    cursor: pointer;
+    overflow: hidden;
+    white-space: nowrap;
+    scroll-behavior: smooth;
+    
+}
+
+.carousel.dragging{
+    cursor: grab;
+    scroll-behavior: auto;
+}
+
+.carousel.dragging img{
+    pointer-events: none;
+}
+
+.wrapper img.flechas{
+    height: 46px;
+    width: 46px;
+    background: #fff;
+    text-align: center;
+    border-radius: 50%;
+    cursor: pointer;
+    line-height: 46px;
+    font-size: 1.2rem;
+}
+
+
+
+.carousel img{
+    height: 340px;
+    object-fit: cover;
+    margin-left: 14px;
+    width: calc(100%/3);
+    
+    
+}
+.carousel img:first-child{
+    margin-left: 0px;
+    
+}
+
+@media screen and (max-width: 900px){
+    .carousel img{
+        width: calc(100%/2);
+    }
+}
+@media screen and (max-width: 550px){
+    .carousel img{
+        width: 100%;
+    }
 }
